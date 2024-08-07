@@ -7,6 +7,13 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+//đây là middleware đã có express.urlencoded xử lý
+app.use(express.urlencoded({
+    extended: true
+})); 
+//với dạng gửi từ code javascript lên thì nó đã có express.json xử lý
+app.use(express.json()); 
+
 // HTTP logger
 // app.use(morgan('combined'));
 
@@ -27,6 +34,12 @@ app.get('/news', (req, res) => {
 
 app.get('/search', (req, res) => {
     res.render('search');
+})
+
+app.post('/search', (req, res) => {
+
+    console.log(req.body);
+    res.send('');
 })
 
 
