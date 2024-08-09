@@ -6,4 +6,4 @@ const newsController = require('../app/controllers/NewsController');
 router.use('/huy-cuong', newsController.show);
 router.use('/', newsController.index);
 
-module.exports = router; 
+module.exports = router;
