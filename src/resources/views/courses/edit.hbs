@@ -1,0 +1,32 @@
+<div class="mt-4">
+  <h3>Cập nhật sinh viên</h3>
+  <form class="mt-4" method="POST" action="/courses/{{course._id}}?_method=PUT">
+
+    <div class="form-group">
+      <label for="userId">Mã sinh viên</label>
+      <input type="text" class="form-control" value="{{course.userId}}" id="userId" name="userId" />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Tên sinh viên</label>
+      <input type="text" class="form-control" value="{{course.name}}" id="name" name="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Ngày sinh</label>
+      <textarea class="form-control" id="date" name="date">{{course.date}}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="avarageScore">Điểm trung bình</label>
+      <input type="text" class="form-control" value="{{course.avarageScore}}" id="avarageScore" name="avarageScore"/>
+    </div>
+
+    <div class="form-group">
+      <label for="major">Ngành học</label>
+      <input type="text" class="form-control" value="{{course.major}}" id="major" name="major"/>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Lưu lại</button>
+  </form>
+</div>
